@@ -1,5 +1,6 @@
 \documentclass[11pt]{article}
-\usepackage{coco}
+\usepackage[noparindent]{coco}
+\usepackage{thmstyles}
 
 % TODO: Remove disgusting paragraph indent
 \setlength{\lineskip}{0.0pt}
@@ -90,10 +91,50 @@ Statistics is divided into two subfields based upon how data is used:
 % TODO: Estimated mean, estimated stddev
 
 % TODO: Regressions, Correlation Coefficient r
+% TODO: PPMC, Critical Values, Degrees of Freedom
 % TODO: Probability
 
 \subsection{Shorthand Calculations}
 
 % TODO: Regressions, stddev, etc
-    
+
+\section{Probability}
+
+\begin{definition}[Event]\label{def:event}
+    Collection of outcomes of a probability experiment
+\end{definition}
+
+\begin{definition}[Sample Space]\label{def:sample-space}
+    The set of all possible outcome of a probability experiment.
+\end{definition}
+
+\begin{definition}[Classical Probability]\label{def:Classical Probability}
+    The ratio for the number of desired outcomes of an event
+    and the number of all possible events in the sample space.
+\end{definition}
+
+\textbf{NOTE} Exhaustive means that for all outcomes of an event, that set is equal to the sample space (Probability is 100\%).
+
+\begin{definition}[Mutually Exclusive]\label{def:mutually-exclusive}
+    Any two events that cannot happen simultaneously
+\end{definition}
+
+\begin{definition}[Independent Events]\label{def:independent-events}
+    Two events are independent if the outcome of the first event,
+    does not effect the outcome of the second.
+\end{definition}
+
+\subsection{Rules}
+
+\subsubsection{Domain of Probabilities}
+
+P(S) == 1
+Addition Rule
+General Addition Rule
+Complement
+
+Multiplication Rule
+
+Conditional Probabiltility
+
 \end{document}
