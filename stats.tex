@@ -13,6 +13,15 @@
     margin=2cm
 }
 
+%\newcommand\perm[2][^n]{\prescript{#1\mkern-2.5mu}{}P_{#2}}
+%\newcommand\comb[2][^n]{\prescript{#1\mkern-0.5mu}{}C_{#2}}
+
+\newcommand{\comb}[2]{{}_{#1}\mathrm{C}_{#2}}
+\newcommand{\perm}[2]{{}_{#1}\mathrm{P}_{#2}}
+
+%\newcommand\perm[2][^n]{\prescript{{}_{#1\mkern-2.5mu}}{}P_{#2}}
+%\newcommand\comb[2][^n]{\prescript{{}_{#1\mkern-0.5mu}}{}C_{#2}}
+
 \begin{document}
 
 % cover page
@@ -181,5 +190,40 @@ The probability of the sample space is $P(S) = 1$
     \end{equation*}
     in other words, no information is gained from the knowledge of event $A$.
 \end{definition}
+
+\section{Combinatorics}
+
+\begin{definition}[Fundamental Counting Principle]\label{def:fund-count-principle}
+    If there are $m$ ways to do something and $n$ ways to do something else, then there are
+    $m \times n$ ways to do both things.
+\end{definition}
+
+\begin{definition}[Combinations Formula]\label{def:combinations-formula}
+    The total number of combinations of $r$ elements chosen from a set of $n$ possible elements is:
+    \begin{equation*}
+        %{n \choose r} = \frac{n\!}{r\!(n - r)\!}
+        %\perm[m]{k} = \frac{m!}{(m-k)!}\quad
+        %\comb[m]{k} = \frac{m!}{k!(m-k)!}\quad
+        %
+        %\comb[n]{r} = \frac{n!}{r!(n-r)!}\quad
+        \comb{n}{r} = \frac{n!}{r!(n-r)!}\quad
+    \end{equation*}
+\end{definition}
+
+\begin{definition}[Permutations Formula]\label{def:permutations-formula}
+    The total number of specific orders of possible arrangements of $r$
+    elements from a set of $n$ elements is:
+    \begin{equation*}
+        \perm{n}{r} = \frac{n!}{(n-r)!}\quad
+    \end{equation*}
+
+    The number of permutations of $n$ objects with $n_1$ identical objects
+    of one type, $n_2$ identical objects of another, and $n_k$ identical objects
+    of $k$, then:
+    \begin{equation*}
+        \frac{n!}{n_{1!}n_{2!} ... n_{k!}}
+    \end{equation*}
+\end{definition}
+
 
 \end{document}
