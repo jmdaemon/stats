@@ -139,8 +139,6 @@ Statistics is divided into two subfields based upon how data is used:
 
 \subsection{Rules}
 
-\subsubsection{Domain of Probabilities}
-
 The domain of probabilities is $0 \leq P(A) \leq 1$ for any given event A.
 
 The probability of the sample space is $P(S) = 1$
@@ -192,15 +190,28 @@ The probability of the sample space is $P(S) = 1$
 \end{definition}
 
 \begin{definition}[Bayes' Theorem]\label{def:bayes-thm}
-    %Let $A_1$, $A_2$ be mutually exclusive events such that
-    %their probabilities are non zero and add to exactly one.
     \begin{equation*}
         P(A | B) = \frac{P(B | A) P(A)}{P(B)}
     \end{equation*}
     where $P(B) \neq 0$
 \end{definition}
 
-\section{Combinatorics}
+\subsection{Probability Distributions}
+
+\begin{definition}[Expectation]\label{def:expectation}
+    Expectation is the weighted mean of a discrete random variable $X$
+    that takes on the values $x_1$, $x_2$, ... $x_n$ is:
+    \begin{equation*}
+        \mu_x = \sum_{i = 1}^n x_i P(X = x_i)
+    \end{equation*}
+
+    The variance of $X$ is:
+    \begin{equation*}
+        {\sigma_x}^2 = \sum_{i = 1}^n (x_i - \mu_x)^2 P(X = x_i)
+    \end{equation*}
+\end{definition}
+
+\section{Combinatorics \& Permutations}
 
 \begin{definition}[Fundamental Counting Principle]\label{def:fund-count-principle}
     If there are $m$ ways to do something and $n$ ways to do something else, then there are
@@ -210,11 +221,6 @@ The probability of the sample space is $P(S) = 1$
 \begin{definition}[Combinations Formula]\label{def:combinations-formula}
     The total number of combinations of $r$ elements chosen from a set of $n$ possible elements is:
     \begin{equation*}
-        %{n \choose r} = \frac{n\!}{r\!(n - r)\!}
-        %\perm[m]{k} = \frac{m!}{(m-k)!}\quad
-        %\comb[m]{k} = \frac{m!}{k!(m-k)!}\quad
-        %
-        %\comb[n]{r} = \frac{n!}{r!(n-r)!}\quad
         \comb{n}{r} = \frac{n!}{r!(n-r)!}\quad
     \end{equation*}
 \end{definition}
