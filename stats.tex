@@ -9,6 +9,10 @@
 \setlength{\parindent}{0pt}
 \setlength{\baselineskip}{0pt}
 
+\geometry{
+    margin=2cm
+}
+
 \begin{document}
 
 % cover page
@@ -128,13 +132,54 @@ Statistics is divided into two subfields based upon how data is used:
 
 \subsubsection{Domain of Probabilities}
 
-P(S) == 1
-Addition Rule
-General Addition Rule
-Complement
+The domain of probabilities is $0 \leq P(A) \leq 1$ for any given event A.
 
-Multiplication Rule
+The probability of the sample space is $P(S) = 1$
 
-Conditional Probabiltility
+\begin{definition}[Addition Rule]\label{def:addition-rule}
+    The addition rule for any mutually exclusive events:
+    
+    \begin{equation*}
+        P (A \cup B) = P (A) + P(B)
+    \end{equation*}
+
+    The addition rule for any two sets:
+    \begin{equation*}
+        P (A \cup B) = P (A) + P(B) - P(A \cap B)
+    \end{equation*}
+\end{definition}
+
+\begin{definition}[Complement Rule]\label{def:complement-rule}
+    The complement of any event $A$ that is $\bar{A}$ (all events but A) is
+    \begin{equation*}
+        P(\bar{A}) = 1 - P(A)
+    \end{equation*}
+\end{definition}
+
+\begin{definition}[Multiplication Rule]\label{def:multiplication-rule}
+    The probability for any two events that occur consecutively:
+    \begin{equation*}
+        P (A \cap B) = P(A) \times P(B \mid A)
+    \end{equation*}
+
+    For any two independent events $A$, $B$:
+    \begin{equation*}
+        P (A \cap B) = P(A) \times P(B)
+    \end{equation*}
+\end{definition}
+
+\begin{definition}[Conditional Probability]\label{def:conditional-probability}
+    The probability that event $B$ occurs after event $A$ already occurred:
+    \begin{equation*}
+        P (B \mid A) = \frac{P(A \cap B)}{P(A)}
+    \end{equation*}
+    where $P(A) \neq 0$.
+
+    In the case of independent events then:
+    \begin{equation*}
+        P (B \mid A) = P(B)
+    \end{equation*}
+    in other words, no information is gained from the knowledge of event $A$.
+\end{definition}
 
 \end{document}
