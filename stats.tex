@@ -196,6 +196,17 @@ The probability of the sample space is $P(S) = 1$
     where $P(B) \neq 0$
 \end{definition}
 
+\begin{definition}[Law of Total Probability]\label{def:law-total-prob}
+    \begin{equation*}
+        P(A) = \sum_n P(A \cap B_n)
+    \end{equation*}
+    or 
+    \begin{equation*}
+        P(A) = \sum_n P(A \mid B_n) P(B_n)
+    \end{equation*}
+    For events $A$, $B_n$ where $B_1$, $B_2$, ... $B_n$ are mutually exclusive.
+\end{definition}
+
 \subsection{Probability Distributions}
 
 \begin{definition}[Expectation]\label{def:expectation}
@@ -223,6 +234,18 @@ The probability of the sample space is $P(S) = 1$
         \item $p$: Probability of success
         \item $1 - p$: Probability of failure
     \end{itemize}
+\end{definition}
+
+\begin{definition}[Mean for Binomial Probability]\label{def:mean-binom-prob}
+    \begin{equation*}
+        \mu = n p
+    \end{equation*}
+\end{definition}
+
+\begin{definition}[Standard Deviation for Binomial Probability]\label{def:stddev-binom-prob}
+    \begin{equation*}
+        \sigma = \sqrt{np (1-p)}
+    \end{equation*}
 \end{definition}
 
 \section{Combinatorics \& Permutations}
